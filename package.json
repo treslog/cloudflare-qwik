@@ -1,0 +1,31 @@
+{
+  "name": "cloudflare-qwik",
+  "version": "0.0.0",
+  "description": "Blank Qwik starter app. Vite.js tooling. Cloudflare Pages (serverless). Tailwind CSS framework.",
+  "scripts": {
+    "build": "npm run typecheck && npm run build.client && npm run build.server",
+    "build.client": "vite build",
+    "build.server": "vite build --outDir server/build --ssr src/entry.cloudflare.tsx",
+    "dev": "npm run dev.client",
+    "dev.client": "vite --mode clientonly",
+    "dev.debug": "node --inspect-brk node_modules/vite/bin/vite.js",
+    "dev.ssr": "vite",
+    "start": "npm run dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.0.18",
+    "@cloudflare/workers-types": "3.2.0",
+    "@types/node": "17.0.17",
+    "autoprefixer": "10.4.2",
+    "postcss": "8.4.6",
+    "tailwindcss": "3.0.18",
+    "typescript": "4.5.5",
+    "vite": "2.8.6"
+  },
+  "author": "Builder.io Team",
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}
